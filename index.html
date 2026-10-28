@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive educational guide to the Central Processing Unit (CPU).">
+  <title>CPU Lab | Explore the Processor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="CPU Lab home"><span class="brand-chip">C</span> CPU<span>LAB</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#overview">Overview</a><a href="#architecture">Architecture</a>
+      <a href="#working">Working</a><a href="#compare">Compare</a><a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse"></span> COMPUTER FUNDAMENTALS • COLLEGE PROJECT</p>
+        <h1>Meet the <span>brain</span><br>of your computer.</h1>
+        <p class="hero-lead">Explore the Central Processing Unit — the processor that interprets instructions, performs
+          calculations, and coordinates your computer's work.</p>
+        <div class="hero-actions"><a class="button primary" href="#overview">Start exploring <span>↘</span></a><a
+            class="text-link" href="#architecture">View the architecture →</a></div>
+        <div class="hero-stats">
+          <div><strong>01</strong><small>Instruction cycle</small></div>
+          <div><strong>ALU</strong><small>Calculations & logic</small></div>
+          <div><strong>CU</strong><small>Control & coordination</small></div>
+        </div>
+      </div>
+      <div class="chip-scene reveal" aria-label="Stylized illustration of a CPU chip">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="chip">
+          <div class="chip-top"><span>CPU</span><span class="chip-dot"></span></div>
+          <div class="chip-core">
+            <div class="core-lines"></div><strong>PROCESSOR</strong><small>EXECUTE • REPEAT</small>
+          </div>
+          <div class="chip-bottom"><span>CORE_01</span><span>∞ GHz*</span></div>
+        </div>
+        <div class="float-tag tag-speed">↗ Instructions</div>
+        <div class="float-tag tag-core">◈ Control unit</div>
+        <p class="chip-caption">*Illustrative chip graphic — not a real speed measurement.</p>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / THE BASICS</p>
+        <h2>What exactly is a CPU?</h2>
+        <p>The CPU executes program instructions and helps manage operations across a computer system.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="icon-box">⌘</div>
+          <h3>Processes instructions</h3>
+          <p>Reads instructions from memory, interprets them, and carries out the required operations.</p><span
+            class="card-number">01</span>
+        </article>
+        <article class="feature-card reveal">
+          <div class="icon-box">∑</div>
+          <h3>Calculates & compares</h3>
+          <p>Performs arithmetic such as addition and logical comparisons such as greater-than.</p><span
+            class="card-number">02</span>
+        </article>
+        <article class="feature-card reveal">
+          <div class="icon-box">⇄</div>
+          <h3>Coordinates work</h3>
+          <p>Works with memory and input/output devices to keep program instructions moving.</p><span
+            class="card-number">03</span>
+        </article>
+      </div>
+      <div class="note-strip reveal"><span class="note-icon">i</span>
+        <p><strong>Remember:</strong> The CPU is important, but it is not the whole computer. RAM, storage, the
+          motherboard, and other components work with it.</p>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="architecture">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / INSIDE THE CHIP</p>
+        <h2>Explore CPU architecture</h2>
+        <p>Select a component to learn what it does.</p>
+      </div>
+      <div class="architecture-layout reveal">
+        <div class="diagram-wrap">
+          <svg class="cpu-diagram" viewBox="0 0 560 410" role="img" aria-labelledby="diagramTitle diagramDesc">
+            <title id="diagramTitle">Simplified CPU architecture diagram</title>
+            <desc id="diagramDesc">Control unit, arithmetic logic unit, and registers connected through internal buses.
+            </desc>
+            <defs>
+              <linearGradient id="cpuGradient" x1="0" x2="1">
+                <stop stop-color="#152b4a" />
+                <stop offset="1" stop-color="#101d33" />
+              </linearGradient>
+            </defs>
+            <rect x="42" y="25" width="476" height="350" rx="22" fill="url(#cpuGradient)" stroke="#35557b"
+              stroke-width="2" />
+            <text x="280" y="55" text-anchor="middle" fill="#9fb9d8" font-size="12" letter-spacing="3">CENTRAL
+              PROCESSING UNIT</text>
+            <g class="diagram-node selected" tabindex="0" role="button" aria-label="Control Unit" data-component="cu">
+              <rect x="78" y="82" width="180" height="105" rx="12" /><text x="168" y="125" text-anchor="middle">CONTROL
+                UNIT</text><text class="node-sub" x="168" y="148" text-anchor="middle">Directs operations</text>
+            </g>
+            <g class="diagram-node" tabindex="0" role="button" aria-label="Arithmetic Logic Unit" data-component="alu">
+              <rect x="302" y="82" width="180" height="105" rx="12" /><text x="392" y="125"
+                text-anchor="middle">ALU</text><text class="node-sub" x="392" y="148" text-anchor="middle">Math &
+                logic</text>
+            </g>
+            <path d="M168 187 V224 H392 V187 M280 224 V250" fill="none" stroke="#5eafff" stroke-width="3"
+              stroke-linecap="round" />
+            <path d="M273 242 L280 251 L287 242" fill="none" stroke="#5eafff" stroke-width="3" />
+            <g class="diagram-node" tabindex="0" role="button" aria-label="Registers" data-component="registers">
+              <rect x="164" y="254" width="232" height="82" rx="12" /><text x="280" y="288"
+                text-anchor="middle">REGISTERS</text><text class="node-sub" x="280" y="310" text-anchor="middle">Tiny,
+                fast storage</text>
+            </g>
+            <text x="280" y="356" text-anchor="middle" fill="#7193bc" font-size="10">INTERNAL CONNECTIONS / BUSES</text>
+          </svg>
+        </div>
+        <div class="component-panel">
+          <p class="eyebrow">COMPONENT SPOTLIGHT</p>
+          <div class="panel-symbol" id="componentSymbol">⌘</div>
+          <h3 id="componentTitle">Control Unit (CU)</h3>
+          <p id="componentDescription">Coordinates CPU activity by interpreting instructions and directing the movement
+            of data between components.</p>
+          <div class="panel-fact"><span>KEY ROLE</span><strong id="componentRole">Directs and coordinates</strong></div>
+          <p class="panel-hint">Tip: click or focus a block in the diagram.</p>
+        </div>
+      </div>
+      <div class="mini-cards">
+        <div><strong>Cache</strong>
+          <p>Small, fast memory that keeps frequently needed data and instructions close to the CPU.</p>
+        </div>
+        <div><strong>Clock</strong>
+          <p>Provides timing signals. Clock speed is measured in hertz, often GHz.</p>
+        </div>
+        <div><strong>Cores</strong>
+          <p>Processing cores can execute instruction streams; more cores can help with parallel workloads.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="working">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / THE INSTRUCTION CYCLE</p>
+        <h2>How does a CPU work?</h2>
+        <p>A simplified view of how a processor handles an instruction.</p>
+      </div>
+      <div class="cycle-grid">
+        <article class="cycle-card reveal">
+          <div class="cycle-top"><span>01</span><span class="cycle-icon">↓</span></div>
+          <h3>Fetch</h3>
+          <p>The CPU retrieves the next instruction from memory.</p>
+        </article>
+        <article class="cycle-card reveal">
+          <div class="cycle-top"><span>02</span><span class="cycle-icon">⌕</span></div>
+          <h3>Decode</h3>
+          <p>The control logic interprets what the instruction asks the CPU to do.</p>
+        </article>
+        <article class="cycle-card reveal">
+          <div class="cycle-top"><span>03</span><span class="cycle-icon">∑</span></div>
+          <h3>Execute</h3>
+          <p>The CPU performs the operation, such as a calculation or data movement.</p>
+        </article>
+        <article class="cycle-card reveal">
+          <div class="cycle-top"><span>04</span><span class="cycle-icon">↻</span></div>
+          <h3>Store / continue</h3>
+          <p>Results may be written to a register or memory, then processing continues.</p>
+        </article>
+      </div>
+      <div class="cycle-demo reveal">
+        <div>
+          <p class="eyebrow">TRY A TINY EXAMPLE</p>
+          <h3>What happens when a program adds 2 + 3?</h3>
+          <p id="cycleExplanation">Press the button to step through a simplified instruction cycle.</p>
+        </div><button class="button primary" id="cycleButton">Run instruction <span>→</span></button>
+        <div class="cycle-progress" aria-label="Instruction cycle progress"><span
+            class="progress-dot active"></span><span class="progress-dot"></span><span class="progress-dot"></span><span
+            class="progress-dot"></span></div>
+      </div>
+    </section>
+
+    <section class="section compare-section" id="compare">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 / UNDERSTAND THE SPECS</p>
+        <h2>Compare processor examples</h2>
+        <p>These are illustrative examples, not a live benchmark or current buying recommendation.</p>
+      </div>
+      <div class="table-wrap reveal">
+        <table>
+          <thead>
+            <tr>
+              <th>Example</th>
+              <th>Core count</th>
+              <th>Clock-speed label</th>
+              <th>Typical focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="processor-mark">A</span><strong>Entry-level CPU</strong></td>
+              <td>2–4 cores</td>
+              <td>Varies by model</td>
+              <td>Basic everyday tasks</td>
+            </tr>
+            <tr>
+              <td><span class="processor-mark">B</span><strong>Mainstream CPU</strong></td>
+              <td>4–8 cores</td>
+              <td>Varies by model</td>
+              <td>Study, office, multitasking</td>
+            </tr>
+            <tr>
+              <td><span class="processor-mark">C</span><strong>High-performance CPU</strong></td>
+              <td>8+ cores</td>
+              <td>Varies by model</td>
+              <td>Heavy workloads, creation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Core counts are broad examples only. Real performance also depends on architecture, power
+        limits, cooling, cache, workload, and software.</p>
+      <div class="spec-callout reveal">
+        <div class="spec-orb">GHz</div>
+        <div>
+          <h3>Does higher GHz always mean faster?</h3>
+          <p>No. Clock speed is only one factor. A newer design may do more work per clock, and performance depends on
+            the specific task and processor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 / CHECK YOUR KNOWLEDGE</p>
+        <h2>CPU knowledge check</h2>
+        <p>Answer these five questions and see your score instantly.</p>
+      </div>
+      <div class="quiz-card reveal">
+        <div class="quiz-progress-row"><span id="questionCount">QUESTION 01 / 05</span>
+          <div class="quiz-track"><span id="quizProgress"></span></div>
+        </div>
+        <h3 id="questionText">What is the main role of the CPU?</h3>
+        <div class="answers" id="answers"></div>
+        <div class="quiz-bottom"><span id="quizFeedback" aria-live="polite">Choose one answer to continue.</span><button
+            class="button primary" id="nextQuestion" disabled>Next question →</button></div>
+      </div>
+    </section>
+
+    <section class="closing-cta reveal">
+      <p class="eyebrow">YOU'VE COMPLETED THE TOUR</p>
+      <h2>Small chip. Big responsibility.</h2>
+      <p>The CPU brings instructions to life by combining control, computation, and fast internal storage.</p><a
+        class="button light" href="#home">Back to top ↑</a>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-chip">C</span> CPU<span>LAB</span></a>
+    <p>Made for learning computer fundamentals.</p><a href="#home">Back to top ↑</a>
+  </footer>
+</body>
+
+</html>
